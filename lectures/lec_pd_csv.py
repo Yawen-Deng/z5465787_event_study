@@ -192,8 +192,8 @@ print(f'The name of the series is {ser_no_name.name}')
 
 # Now save it to the same CSV file as above
 ser_no_name.to_csv(QAN_CLOSE_CSV)
-#
-#
+
+
 ## Read the data back
 #as_df = pd.read_csv(QAN_CLOSE_CSV)
 #print(as_df)
