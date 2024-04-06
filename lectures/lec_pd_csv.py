@@ -194,10 +194,24 @@ print(f'The name of the series is {ser_no_name.name}')
 ser_no_name.to_csv(QAN_CLOSE_CSV)
 
 
-## Read the data back
-#as_df = pd.read_csv(QAN_CLOSE_CSV)
-#print(as_df)
+# Read the data back
+as_df = pd.read_csv(QAN_CLOSE_CSV)
+print(as_df)
+# Output:
+#      Unnamed: 0     0
+# 0    2020-01-02  7.16
+# 1    2020-01-03  7.19
+# 2    2020-01-06  7.00
+# 3    2020-01-07  7.10
+# 4    2020-01-08  6.86
+# ..          ...   ...
+# 249  2020-12-22  4.80
+# 250  2020-12-23  4.91
+# 251  2020-12-24  4.89
+# 252  2020-12-29  4.96
+# 253  2020-12-30  4.96
 #
+# [254 rows x 2 columns]
 
 
 # ----------------------------------------------------------------------------
@@ -205,12 +219,26 @@ ser_no_name.to_csv(QAN_CLOSE_CSV)
 # ----------------------------------------------------------------------------
 # Using the ser_no_name created above
 # Save the contents without column headers
-
-#ser_no_name.to_csv(QAN_CLOSE_CSV, header=False)
-## Read it back
-#as_df = pd.read_csv(QAN_CLOSE_CSV, header=None, index_col=0)
-#print(as_df)
+ser_no_name.to_csv(QAN_CLOSE_CSV, header=False)
+# Read it back
+as_df = pd.read_csv(QAN_CLOSE_CSV, header=None, index_col=0)
+print(as_df)
+# Output:
+#                1
+# 0
+# 2020-01-02  7.16
+# 2020-01-03  7.19
+# 2020-01-06  7.00
+# 2020-01-07  7.10
+# 2020-01-08  6.86
+# ...          ...
+# 2020-12-22  4.80
+# 2020-12-23  4.91
+# 2020-12-24  4.89
+# 2020-12-29  4.96
+# 2020-12-30  4.96
 #
+# [254 rows x 1 columns]
 
 
 # ----------------------------------------------------------------------------
@@ -218,12 +246,26 @@ ser_no_name.to_csv(QAN_CLOSE_CSV)
 # ----------------------------------------------------------------------------
 # Using the ser_no_name created above
 # Save the contents without column headers
-
-#ser_no_name.to_csv(QAN_CLOSE_CSV, header=False)
-## Read it back
-#as_df = pd.read_csv(QAN_CLOSE_CSV, header=None, names=["Date", "Close"], index_col=0)
-#print(as_df)
+ser_no_name.to_csv(QAN_CLOSE_CSV, header=False)
+# Read it back
+as_df = pd.read_csv(QAN_CLOSE_CSV, header=None, names=["Date", "Close"], index_col=0)
+print(as_df)
+# Output:
+#             Close
+# Date
+# 2020-01-02   7.16
+# 2020-01-03   7.19
+# 2020-01-06   7.00
+# 2020-01-07   7.10
+# 2020-01-08   6.86
+# ...           ...
+# 2020-12-22   4.80
+# 2020-12-23   4.91
+# 2020-12-24   4.89
+# 2020-12-29   4.96
+# 2020-12-30   4.96
 #
+# [254 rows x 1 columns]
 
 
 # ----------------------------------------------------------------------------
@@ -231,12 +273,26 @@ ser_no_name.to_csv(QAN_CLOSE_CSV)
 # ----------------------------------------------------------------------------
 # Using the ser_no_name created above
 # Save the contents without column headers
-
-#ser_no_name.to_csv(QAN_CLOSE_CSV,
-#        index_label="Date",
-#        header=['Close'],
-#        )
-## Read it back
-#as_df = pd.read_csv(QAN_CLOSE_CSV, index_col=0)
-#print(as_df)
+ser_no_name.to_csv(QAN_CLOSE_CSV,
+        index_label="Date",
+        header=['Close'],
+        )
+# Read it back
+as_df = pd.read_csv(QAN_CLOSE_CSV, index_col=0)
+print(as_df)
+# Output:
+#             Close
+# Date
+# 2020-01-02   7.16
+# 2020-01-03   7.19
+# 2020-01-06   7.00
+# 2020-01-07   7.10
+# 2020-01-08   6.86
+# ...           ...
+# 2020-12-22   4.80
+# 2020-12-23   4.91
+# 2020-12-24   4.89
+# 2020-12-29   4.96
+# 2020-12-30   4.96
 #
+# [254 rows x 1 columns]
